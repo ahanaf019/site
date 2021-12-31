@@ -1,13 +1,61 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Test Page</title>
-</head>
-<body>
-    <h1>Hello World</h1>
-    <div><a href="/about/">about</a></div>
-</body>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <h1>HTML, CSS & JavaScript Practice</h1>
+    <ul>
+      <li>
+        <a href="https://www.w3schools.com/html/default.asp" target="_blank"
+          >HTML Tutorials</a
+        >
+      </li>
+
+      <li>
+        <a href="https://www.w3schools.com/css/" target="_blank"
+          >CSS Tutorials</a
+        >
+      </li>
+
+      <li>
+        <a href="https://www.w3schools.com/js/" target="_blank">JavaScript</a>
+      </li>
+    </ul>
+
+    <p id="desc">
+      Okay let's talk a little bit about relative font sizing. And for that
+      we're going to take a look at font size before that HTML. And it's located
+      in the same folder as the previous file. Now there are two units of
+      measurements that are relative that we're going to talk about and that is
+      percent and ems. Let's start with percent first of all let's specify that
+      our body tag should have fun size of a 120 %. And what that means is Is
+      that we want to take whatever the default size is, and by default I mean
+      whatever the browser provides by default, and increase it by 120%. You can
+      actually do a quick calculation and figure out what pixel size that would
+      be. Most browsers have 16 pixels as default text size. So 120% of 16 would
+      a little bit over 19 pixels. So if we refresh the page, we'll see that we
+      increased the font size in the entire HTML document. Let's now target the
+      very first text here that says 2em text. So lets go ahead and actually use
+      an inline style since we're just testing and specify the font size to be
+      2em. And is a unit of measurement that is equivalent to the width of the
+      letter m in this particular font that we're using. It sounds a little bit
+      confusing at first, but the bottom line is it's a relative size. It's
+      relative to something. And for this div where it says 2em text, what this
+      is saying is it's relative to whatever the font size is at the moment
+      we're applying it. Since we set the font size to 120% in the entire body,
+      this div also received at 120% and when you combine this font size with
+      this one, this basically says I want to increase the font two times of
+      whatever a 120 was. So if we take a look at this text this 2em should
+      really increase twice as large as this word regular text. So if we save
+      the file and refresh, and you can see now everything since that div
+      includes the other divs they got increased. That looks just about right
+      that it's twice the size of the regular text. Now you might find this
+      confusing.
+    </p>
+  </body>
 </html>
