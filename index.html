@@ -37,13 +37,16 @@
       background-color: #343a40;
     }
     #about h2, #skills h2, #projects h2, #contact h2 {
-      color: #122620; /* Modified color */
-      font-family: "Fira Code", monospace; /* Modified font */
+      color: #ffffff;
+      font-size: 32px;
+      font-weight: bold;
     }
     .card {
-      background-color: #ffffff;
       color: #343a40;
+      background-color: #343a40;
+      border-color: #343a40;
     }
+
     footer {
       background-color: #343a40;
     }
@@ -79,10 +82,12 @@
 
     #skills .card-img {
       transition: opacity 0.3s;
+
     }
 
     #skills .card:hover .card-img {
       opacity: 0.5;
+      
     }
 
     #skills .card-img-overlay {
@@ -103,7 +108,71 @@
       font-family: "Ubuntu Mono", monospace;
     }
 
-    
+
+    .project-card {
+      background-color: #343a40;
+      color: #ffffff;
+      border: 2px solid #ffffff;
+      border-radius: 10px;
+      box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+      transition: all 1.5s ease-in-out;
+      display: flex;
+      align-items: center;
+      padding: 20px 10px;
+      margin-bottom: 15px;
+      height: 130px
+    }
+
+    .project-card:hover {
+      border-color: #ffffff;
+      cursor: pointer;
+    }
+
+    .project-card .card-title {
+      font-size: 28px;
+      font-weight: bold;
+      text-align: center;
+      margin-bottom: 10px;
+      transition: all 0.5s ease-in-out;
+    }
+
+    .project-card .card-description {
+      display: none;
+      opacity: 0;
+      transition: opacity 0.5s;
+      padding: 10px;
+    }
+
+    .project-card:hover {
+      height: 130px;
+    }
+
+    .project-card:hover .card-title {
+      font-size: 24px;
+    }
+
+    .project-card:hover .card-description {
+      display: block;
+      opacity: 1;
+      margin-top: 10px;
+      transition: opacity 2.5s ease-in-out;
+
+    }
+
+    .project-card .card-description p {
+      margin: 0;
+    }
+
+    .project-card .card-title a {
+      color: #ffffff;
+      font-weight: bold;
+      text-decoration: none;
+    }
+
+    .project-card .card-title a:hover {
+      color: #f8f9fa;
+    }
+
 
   </style>
 </head>
@@ -118,13 +187,16 @@
         <div class="collapse navbar-collapse" id="navbarNav">
           <ul class="navbar-nav ml-auto">
             <li class="nav-item">
-              <a class="nav-link" href="#">About</a>
+              <a class="nav-link" href="#about">About</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#">Portfolio</a>
+              <a class="nav-link" href="#skills">Skills</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#">Contact</a>
+              <a class="nav-link" href="#projects">Projects</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#contact">Contact</a>
             </li>
           </ul>
         </div>
@@ -132,55 +204,115 @@
     </nav>
 
 
-    <section class="hero bg-primary text-white text-center py-5" style="height: 100vh; display: flex; align-items: center; justify-content: center;">
+    <section class="hero text-white text-center py-5" style="height: 100vh; display: flex; align-items: center; justify-content: center;">
       <div class="container">
         <h1>Md. Ahanaf Arif Khan</h1>
         <p>Data Science | Machine Learning | Deep Learning Enthusiast</p>
       </div>
     </section>
 
-    <section id="about" class="py-5">
+    <section id="about" class="py-5 section-title">
       <div class="container">
-        <h2 class="text-center mb-4">About Me</h2>
+        <h2 class="text-center mb-4"><u>About Me</u></h2>
         <div class="row">
           <div class="col-md-4">
-            <img src="https://via.placeholder.com/200" alt="Profile Picture">
+            <img src="resources/profile_picture.png" alt="Profile Picture" width="350" height="350" style="border-radius: 20px;">
           </div>
           <div class="col-md-8">
             <h3>Md. Ahanaf Arif Khan</h3>
-            <p>Undergraduate Student,<br>Department of Computer Science & Engineeering,<br>University of Rajshahi.</p>
+            <p>Undergraduate Student,<br>Department of Computer Science & Engineeering,<br>University of Rajshahi,<br>Bangladesh.</p>
             
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam sodales, tortor sit amet sollicitudin dignissim, lacus nulla placerat enim, ut vestibulum eros nunc et urna. Sed eget mauris est. Vivamus fermentum tortor id mi condimentum, ut dignissim lectus finibus.</p>
+            <p>Hello! I'm an enthusiastic student with a strong interest in deep learning, machine learning, and data science, I am constantly seeking to broaden my knowledge and skills in these areas. I'm fascinated by these fields' transformative potential in solving complex problems and making meaningful contributions to society. I have a solid foundation in computer science thanks to my academic journey, and I am actively exploring cutting-edge technologies and techniques. Curiosity, a thirst for knowledge, and a determination to make a positive difference through innovative applications of AI and data-driven solutions motivate me.</p>
           </div>
         </div>
       </div>
     </section>
 
-    <section id="skills" class="py-5">
+    <section id="skills" class="py-5 section-title">
     <div class="container">
       <h2 class="text-center mb-4">Skills</h2>
       <div class="row">
+
         <div class="col-md-4 mb-4">
           <div class="card">
-            <img src="https://via.placeholder.com/300" class="card-img" alt="Skill 1">
+            <img src="resources/skills/python.png" class="card-img" alt="python" width="300px" height="300px">
             <div class="card-img-overlay d-flex align-items-center justify-content-center">
-              <p class="card-text text-white text-center">Skill 1 Description</p>
+              <p class="card-text text-white text-center">Advanced at Python</p>
             </div>
           </div>
         </div>
+
         <div class="col-md-4 mb-4">
           <div class="card">
-            <img src="https://via.placeholder.com/300" class="card-img" alt="Skill 2">
+            <img src="resources/skills/cpp.png" class="card-img" alt="cpp" width="300px" height="300px">
             <div class="card-img-overlay d-flex align-items-center justify-content-center">
-              <p class="card-text text-white text-center">Skill 2 Description</p>
+              <p class="card-text text-white text-center">Intermediate at C++</p>
             </div>
           </div>
         </div>
+
         <div class="col-md-4 mb-4">
           <div class="card">
-            <img src="https://via.placeholder.com/300" class="card-img" alt="Skill 3">
+            <img src="resources/skills/java.png" class="card-img" alt="Skill 3" width="300px" height="300px">
             <div class="card-img-overlay d-flex align-items-center justify-content-center">
-              <p class="card-text text-white text-center">Skill 3 Description</p>
+              <p class="card-text text-white text-center">Intermediate at Java</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- <div class="col-md-4 mb-4">
+          <div class="card">
+            <img src="resources/skills/java.png" class="card-img" alt="Skill 3" width="300px" height="300px">
+            <div class="card-img-overlay d-flex align-items-center justify-content-center">
+              <p class="card-text text-white text-center">Intermediate at Java</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-4 mb-4">
+          <div class="card">
+            <img src="resources/skills/java.png" class="card-img" alt="Skill 3" width="300px" height="300px">
+            <div class="card-img-overlay d-flex align-items-center justify-content-center">
+              <p class="card-text text-white text-center">Intermediate at Java</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-4 mb-4">
+          <div class="card">
+            <img src="resources/skills/java.png" class="card-img" alt="Skill 3" width="300px" height="300px">
+            <div class="card-img-overlay d-flex align-items-center justify-content-center">
+              <p class="card-text text-white text-center">Intermediate at Java</p>
+            </div>
+          </div> -->
+        </div>
+
+
+    </div>
+  </section>
+
+
+  <section id="projects" class="py-5 section-title">
+    <div class="container">
+      <h2 class="text-center mb-4">My Projects</h2>
+      <div class="row">
+        <div class="col-md-12">
+          <div class="card project-card">
+            <div class="card-body">
+              <h3 class="card-title"><a href="#">Project 1</a></h3>
+              <div class="card-description">
+                <p>This is a description of Project 1. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-12">
+          <div class="card project-card">
+            <div class="card-body">
+              <h3 class="card-title"><a href="#">Project 2</a></h3>
+              <div class="card-description">
+                <p>This is a description of Project 2. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+              </div>
             </div>
           </div>
         </div>
@@ -189,36 +321,12 @@
   </section>
 
 
-    <section id="projects" class="py-5">
-      <div class="container">
-        <h2 class="text-center mb-4">My Projects</h2>
-        <div class="row">
-          <div class="col-md-6 mb-4">
-            <div class="card">
-              <div class="card-body">
-                <h3 class="card-title">Project 1</h3>
-                <p class="card-text">This is a description of Project 1. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-              </div>
-            </div>
-          </div>
-          <div class="col-md-6 mb-4">
-            <div class="card">
-              <div class="card-body">
-                <h3 class="card-title">Project 2</h3>
-                <p class="card-text">This is a description of Project 2. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
     <section id="contact" class="py-5">
       <div class="container">
         <h2 class="text-center mb-4">Contact</h2>
         <div class="row">
           <div class="col-md-6">
-            <p>Email: example@example.com</p>
+            <p>Email: ahanaf019@gmail.com</p>
             <p>Phone: 123-456-7890</p>
             <p>Address: 123 Street, City, Country</p>
           </div>
@@ -227,7 +335,7 @@
     </section>
 
     <footer class="bg-dark text-white text-center py-3">
-      <p>&copy; <script>document.write(new Date().getFullYear());</script> Your Name. All rights reserved.</p>
+      <p>&copy; <script>document.write(new Date().getFullYear());</script> Md. Ahanaf Arif Khan. All rights reserved.</p>
     </footer>
   </div>
 
@@ -247,6 +355,8 @@
         }
       });
     });
+
+    
   </script>
 </body>
 </html>
