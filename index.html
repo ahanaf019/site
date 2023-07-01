@@ -1,61 +1,252 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Test Page</title>
-    <link rel="stylesheet" href="style.css" />
-  </head>
-  <body>
-    <h1>HTML, CSS & JavaScript Practice</h1>
-    <ul>
-      <li>
-        <a href="https://www.w3schools.com/html/default.asp" target="_blank"
-          >HTML Tutorials</a
-        >
-      </li>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Md. Ahanaf Arif Khan</title>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <style>
+    body {
+      background-color: #343a40;
+      color: #ffffff;
+    }
+    .navbar {
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      z-index: 9999;
+      background-color: #343a40;
+    }
+    .navbar .nav-link {
+      color: #ffffff;
+    }
+    .navbar .nav-link:hover, .navbar .nav-link:focus {
+      color: #f8f9fa;
+    }
+    .hero {
+      background-image: url('https://images.unsplash.com/photo-1688027656220-23baef934085?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1962&q=80');
+      background-size: cover;
+      background-position: center;
+      color: #ffffff;
+    }
+    .hero h1, .hero p {
+      color: inherit;
+    }
+    #about, #skills, #projects, #contact {
+      background-color: #343a40;
+    }
+    #about h2, #skills h2, #projects h2, #contact h2 {
+      color: #122620; /* Modified color */
+      font-family: "Fira Code", monospace; /* Modified font */
+    }
+    .card {
+      background-color: #ffffff;
+      color: #343a40;
+    }
+    footer {
+      background-color: #343a40;
+    }
 
-      <li>
-        <a href="https://www.w3schools.com/css/" target="_blank"
-          >CSS Tutorials</a
-        >
-      </li>
+    .card-img-overlay {
+      opacity: 0;
+      transition: opacity 0.3s ease-in-out;
+    }
 
-      <li>
-        <a href="https://www.w3schools.com/js/" target="_blank">JavaScript</a>
-      </li>
-    </ul>
+    .card:hover .card-img-overlay {
+      opacity: 1;
+    }
 
-    <p id="desc">
-      Okay let's talk a little bit about relative font sizing. And for that
-      we're going to take a look at font size before that HTML. And it's located
-      in the same folder as the previous file. Now there are two units of
-      measurements that are relative that we're going to talk about and that is
-      percent and ems. Let's start with percent first of all let's specify that
-      our body tag should have fun size of a 120 %. And what that means is Is
-      that we want to take whatever the default size is, and by default I mean
-      whatever the browser provides by default, and increase it by 120%. You can
-      actually do a quick calculation and figure out what pixel size that would
-      be. Most browsers have 16 pixels as default text size. So 120% of 16 would
-      a little bit over 19 pixels. So if we refresh the page, we'll see that we
-      increased the font size in the entire HTML document. Let's now target the
-      very first text here that says 2em text. So lets go ahead and actually use
-      an inline style since we're just testing and specify the font size to be
-      2em. And is a unit of measurement that is equivalent to the width of the
-      letter m in this particular font that we're using. It sounds a little bit
-      confusing at first, but the bottom line is it's a relative size. It's
-      relative to something. And for this div where it says 2em text, what this
-      is saying is it's relative to whatever the font size is at the moment
-      we're applying it. Since we set the font size to 120% in the entire body,
-      this div also received at 120% and when you combine this font size with
-      this one, this basically says I want to increase the font two times of
-      whatever a 120 was. So if we take a look at this text this 2em should
-      really increase twice as large as this word regular text. So if we save
-      the file and refresh, and you can see now everything since that div
-      includes the other divs they got increased. That looks just about right
-      that it's twice the size of the regular text. Now you might find this
-      confusing.
-    </p>
-  </body>
+    .card-text {
+      font-family: "Ubuntu Mono", monospace;
+      font-size: 25px;
+      font-weight: bold;
+    }
+
+    #skills .card-img-overlay {
+      transition: all 0.3s;
+      backdrop-filter: blur(5px);
+    }
+
+    #skills .card-text {
+      font-size: 30px;
+      text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    }
+
+    #skills .card:hover .card-img-overlay {
+      backdrop-filter: none;
+    }
+
+    #skills .card-img {
+      transition: opacity 0.3s;
+    }
+
+    #skills .card:hover .card-img {
+      opacity: 0.5;
+    }
+
+    #skills .card-img-overlay {
+      transition: all 0.3s;
+      backdrop-filter: blur(5px);
+    }
+
+    #skills .card-text {
+      font-size: 30px;
+      text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    }
+
+    #skills .card:hover .card-img-overlay {
+      backdrop-filter: none;
+    }
+
+    body {
+      font-family: "Ubuntu Mono", monospace;
+    }
+
+    
+
+  </style>
+</head>
+<body>
+  <div class="container">
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+      <div class="container">
+        <a class="navbar-brand" href="#" style="color: #ffffff; font-size: 20px;">Home</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav ml-auto">
+            <li class="nav-item">
+              <a class="nav-link" href="#">About</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Portfolio</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Contact</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+
+    <section class="hero bg-primary text-white text-center py-5" style="height: 100vh; display: flex; align-items: center; justify-content: center;">
+      <div class="container">
+        <h1>Md. Ahanaf Arif Khan</h1>
+        <p>Data Science | Machine Learning | Deep Learning Enthusiast</p>
+      </div>
+    </section>
+
+    <section id="about" class="py-5">
+      <div class="container">
+        <h2 class="text-center mb-4">About Me</h2>
+        <div class="row">
+          <div class="col-md-4">
+            <img src="https://via.placeholder.com/200" alt="Profile Picture">
+          </div>
+          <div class="col-md-8">
+            <h3>Md. Ahanaf Arif Khan</h3>
+            <p>Undergraduate Student,<br>Department of Computer Science & Engineeering,<br>University of Rajshahi.</p>
+            
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam sodales, tortor sit amet sollicitudin dignissim, lacus nulla placerat enim, ut vestibulum eros nunc et urna. Sed eget mauris est. Vivamus fermentum tortor id mi condimentum, ut dignissim lectus finibus.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="skills" class="py-5">
+    <div class="container">
+      <h2 class="text-center mb-4">Skills</h2>
+      <div class="row">
+        <div class="col-md-4 mb-4">
+          <div class="card">
+            <img src="https://via.placeholder.com/300" class="card-img" alt="Skill 1">
+            <div class="card-img-overlay d-flex align-items-center justify-content-center">
+              <p class="card-text text-white text-center">Skill 1 Description</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4 mb-4">
+          <div class="card">
+            <img src="https://via.placeholder.com/300" class="card-img" alt="Skill 2">
+            <div class="card-img-overlay d-flex align-items-center justify-content-center">
+              <p class="card-text text-white text-center">Skill 2 Description</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4 mb-4">
+          <div class="card">
+            <img src="https://via.placeholder.com/300" class="card-img" alt="Skill 3">
+            <div class="card-img-overlay d-flex align-items-center justify-content-center">
+              <p class="card-text text-white text-center">Skill 3 Description</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+    <section id="projects" class="py-5">
+      <div class="container">
+        <h2 class="text-center mb-4">My Projects</h2>
+        <div class="row">
+          <div class="col-md-6 mb-4">
+            <div class="card">
+              <div class="card-body">
+                <h3 class="card-title">Project 1</h3>
+                <p class="card-text">This is a description of Project 1. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-6 mb-4">
+            <div class="card">
+              <div class="card-body">
+                <h3 class="card-title">Project 2</h3>
+                <p class="card-text">This is a description of Project 2. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="contact" class="py-5">
+      <div class="container">
+        <h2 class="text-center mb-4">Contact</h2>
+        <div class="row">
+          <div class="col-md-6">
+            <p>Email: example@example.com</p>
+            <p>Phone: 123-456-7890</p>
+            <p>Address: 123 Street, City, Country</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <footer class="bg-dark text-white text-center py-3">
+      <p>&copy; <script>document.write(new Date().getFullYear());</script> Your Name. All rights reserved.</p>
+    </footer>
+  </div>
+
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+  <script>
+    // Smooth scrolling for navbar links
+    $(document).ready(function() {
+      $('a[href^="#"]').on('click', function(event) {
+        var target = $(this.getAttribute('href'));
+        if (target.length) {
+          event.preventDefault();
+          $('html, body').animate({
+            scrollTop: target.offset().top
+          }, 1000);
+        }
+      });
+    });
+  </script>
+</body>
 </html>
